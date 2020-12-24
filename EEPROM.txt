@@ -1,0 +1,69 @@
+MAX = 255*8 = 2040		Starting Index = 0 * 8 = 0
+
+------------------------+------------------+--------------------+
+   Classrom Code(m*13)	|	PIN	   |  Classroom Info	|
+------------------------|------------------+--------------------+
+        0 -> 3211 	|      1-4	   |	  5-12		|0->  0000 1101
+	13-> 3213	|      14-17	   |	  18-25		|
+	26-> 3215	|      27-30	   |	  31-38		|
+	39-> 3216	|      40-43	   |	  44-51		|
+	52-> 3223	|      53-56	   |	  57-64	|
+------------------------+------------------+--------------------|
+
+
+Classroom Info:
+Date : 05  31
+Month : 09 12
+Year : 20 
+Time(Hr) : 08
+Time(Min): 44
+Time(AM/PM): 01/02 (AM:1, PM:2)
+Attendance: 25   0001 0001		(address+11)	[11]
+
+
+print LCD : 20x4
+
+106,107,109,110,111 =19
+106,107,109,110,111 =19
+106,107,109,110,111 =19
+A : Next B:Prev
+
+
+Student Info:
+Id: must be between 0-255
+Pin : must be between 0-7 Character
+example : m*5 + 210
+210 -> ID: 116
+211 -> 1
+212 -> 2
+213 -> 3
+214 -> 4
+
+215 -> ID: 117
+216 -> 1
+217 -> 2
+218 -> 3
+219 -> 4
+
+220 -> ID: 118
+221 -> 1
+222 -> 2
+223 -> 3
+224 -> 4
+
+System info:
+Number Of Classroom : 0  (1000)
+Number of Total Student : 0 (1001)
+Classroom code Starting Address : 0 (1002)
+Student info Starting Address : 210 (1003)
+
+classroom Info        : 0-64       address byte.
+System_info   	      : 1000-1003  address byte
+Register student_info : 210-319 address byte.(id 106-133 = 22).	499 reserved.
+attendent student_info :500-549 (3211)
+			550-599 (3213)
+			600-649 (3215)
+			650-699 (3216)
+			700-749 (3223)
+
+

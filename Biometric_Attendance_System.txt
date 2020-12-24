@@ -1,0 +1,127 @@
+Components
+
+1. Arduino Mega 2560						= 750
+2. R305/R307 Fingerprint Scanner Module				= 2280
+3. RTC Module(DS3231 or DS1307) for real time clock		= 30
+4. 20X4 LCD display						= 300
+5. SD card Reader						= 80
+6. Hex keypad							= 74
+7. Buzzer							= 15
+8. LED								= 5
+9. Breadboard							= 70
+10. Connecting wires						= 65
+11. Push button switch						= 10
+12. 10K potentiometer(variable resistance)			= 20
+13. 9 Volt Battery						= 50
+14. Micro SD Card						= 250
+							Total	= 3999
+
+__________Working Procedure__________
+1. ON/OFF
+2. Home display:
+	Date: 13/03/2020
+	Time: 17:30:30
+	Press A for menu
+
+3. Menu Display
+	A : Start Attendance		// display 5
+	B : Register			// display 11
+	C : Delete			// display 12
+	D : Home			// display 2
+
+
+/* Optional Part
+4. Start Attendace Display
+	A : New Course
+	B : Existing Course
+	C : Delete Course
+	D : Back
+*/
+
+5. New Course
+	Enter ClassCode:	
+	4651
+	A : OK
+	B : Clear C: Back		// display 3
+
+6. After Pressing OK
+	Enter PIN: 1234
+	A : Start
+	B : Cancel			// display 3
+
+7. After pressing Start
+	Date : 13/03/2020
+	Time : 17:30:30
+	Class in Progress
+	A : Join B: Finish
+
+
+
+8. Entering ID Password:
+
+	ID: 116
+	PIN: 1254
+	A: NEXT B: CLEAR
+	C: SUBMIT D: BACK
+
+
+9. After pressing finish in display 7
+	Enter ClassCode:4651
+	Enter Pin:1234
+	A : OK
+	B : Back			//display 7
+
+10. Finishing attendance:
+	if Matched classcode and pin:
+		Class has finished
+		A : Home		//go to display 2
+	else
+		Class code or PIN
+		was not matched
+		A : OK			// go to display 7
+
+
+11. Register ID
+	ID:  118		
+	A: OK B: Clear
+
+14. Register PIN
+	PIN: 
+	A: OK B: Clear
+
+
+12. Delete Student Record
+	ID: 
+	A: OK B: CLEAR
+	C: BACK
+
+13. Confirm Admin password
+	ADMIN PIN:
+	A: SUBMIT B:CLEAR		A:3
+	C: BACK
+
+15. C.INFO
+	Classroom ID: 
+	0: 3211	1: 3213 2: 3215
+	3: 3216 4: 3223
+	A: OK B: BACK
+
+
+16. C.INFO PIN
+	PIN:
+	A : SUBMIT B:CLEAR
+	
+
+17. C.INFO Settings
+	A. SHOW ID
+	B: DELETE RECORD
+	C: BACK
+18. Show ID
+	106,107,109,110,111 =19
+	106,107,109,110,111 =19
+	106,107,109,110,111 =19
+	A:Next B:Prev C:Back
+
+
+** Have to clear attendance after showing
+** Have to check multiple id entry on same id
